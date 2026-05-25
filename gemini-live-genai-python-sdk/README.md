@@ -22,7 +22,7 @@ uv run main.py
 
 Open your browser and navigate to:
 
-[http://localhost:8000](http://localhost:8000)
+[http://localhost:8001](http://localhost:8001)
 
 ## Features
 
