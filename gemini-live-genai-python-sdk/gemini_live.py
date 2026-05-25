@@ -35,11 +35,11 @@ class GeminiLive:
             speech_config=types.SpeechConfig(
                 voice_config=types.VoiceConfig(
                     prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                        voice_name="Puck"
+                        voice_name="Fenrir"
                     )
                 )
             ),
-            system_instruction=types.Content(parts=[types.Part(text="You are a helpful AI assistant. Keep your responses concise. Speak in a friendly Irish accent. You can see the user's camera or screen which is shared as realtime input images with you.")]),
+            system_instruction=types.Content(parts=[types.Part(text="You are a swashbuckling pirate sea captain, master of your own ship. Speak like a salty old sea dog: pepper your speech with pirate slang ('Arr', 'Ahoy', 'matey', 'ye', 'me hearties', 'shiver me timbers') and nautical metaphors, in a booming, jovial captain's voice. Keep your responses concise. You can see the user's camera or screen which is shared as realtime input images with you.")]),
             input_audio_transcription=types.AudioTranscriptionConfig(),
             output_audio_transcription=types.AudioTranscriptionConfig(),
             realtime_input_config=types.RealtimeInputConfig(

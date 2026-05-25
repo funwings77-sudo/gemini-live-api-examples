@@ -130,7 +130,7 @@ async def websocket_endpoint(websocket: WebSocket):
 @app.post("/twilio/inbound")
 async def twilio_inbound():
     """Handles inbound Twilio calls. Returns TwiML to open a media stream."""
-    host = TWILIO_APP_HOST or "localhost:8000"
+    host = TWILIO_APP_HOST or "localhost:8001"
     twiml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Say>Connecting to Gemini Live.</Say>
@@ -193,5 +193,5 @@ async def twilio_stream(websocket: WebSocket):
 if __name__ == "__main__":
     import uvicorn
 
-    port = int(os.getenv("PORT", 8000))
+    port = int(os.getenv("PORT", 8001))
     uvicorn.run(app, host="0.0.0.0", port=port)
